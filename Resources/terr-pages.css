@@ -1,0 +1,235 @@
+body {
+  background-color: rgb(240, 240, 240);
+  font-size: 16px;
+}
+
+.page-head,
+.street-name {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.page-head {
+  font-size: 1.3rem;
+  margin-top: 20px;
+}
+
+.page-head h2 {
+  margin: 10px 0;
+  border-bottom: 1.5px solid black;
+}
+
+.page-head h3 {
+  margin-top: 10px;
+  font-size: 3rem;
+  border: 2px solid black;
+  padding: 5.5px 4.75rem;
+  order: 1;
+}
+
+.street-name {
+  margin-top: 30px;
+  font-size: 2.25rem;
+}
+
+.button-box {
+  display: none;
+}
+
+.dropdown-menu, .dropdown-menu-symbols {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+  margin: auto;
+  margin-top: 20px;
+  flex-direction: column;
+}
+
+.dropdown-menu button, .dropdown-menu-symbols button {
+  background: none;
+  border: 2px solid black;
+  border-radius: 8px;
+  font-size: 1.75rem;
+  cursor: pointer;
+}
+
+.address, .symbols {
+  position: relative;
+}
+
+.address button:focus + ul, .symbols button:focus + ul {
+  opacity: 1;
+  pointer-events: all;
+  transform: translateY(0px);
+}
+
+.address ul, .symbols ul {
+  position: absolute;
+  background: rgb(240, 240, 240);
+  box-shadow: 0.1em 0.1em 1.25em rgba(0, 0, 0, 0.3);
+  margin-top: 10px;
+  width: 118px;
+  height: 175px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  list-style: none;
+  border-radius: 10px;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-10px);
+  transition: all 0.4s ease;
+}
+
+.address li, .symbols li {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.address li:hover, .symbols li:hover {
+  background-color: rgba(0, 0, 0, 0.356);
+}
+
+.address a, .symbols a {
+  color: black;
+  text-decoration: none;
+}
+
+.symbols button {
+  padding: 1px 26px;
+}
+
+@media screen and (min-width: 480px) {
+  .page-head {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 40px;
+    font-size: 2rem;
+  }
+
+  .page-head h1 {
+    max-width: 137px;
+    font-size: 1.6rem;
+  }
+
+  .page-head h3 {
+    font-size: 3rem;
+    padding: 5px 9rem;
+    border-radius: 15px;
+    order: 0;
+  }
+
+  .button-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
+
+  .back-button {
+    border: none;
+    color: black;
+    padding: 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    background-color: rgb(240, 240, 240);
+  }
+
+  .back-button:hover {
+    color: white;
+    background-color: #000;
+  }
+
+  .street-name {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .dropdown-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    margin: auto;
+    margin-top: 20px;
+  }
+  
+  .dropdown-menu button {
+    background: none;
+    border: 2px solid black;
+    border-radius: 25px;
+    font-size: 3.25rem;
+    cursor: pointer;
+    padding: 10px;
+  }
+
+  .dropdown-menu button:hover {
+    color: rgba(0, 0, 0, 0.712);
+    border: 2px solid rgba(0, 0, 0, 0.712);
+  } 
+  
+  .address {
+    position: relative;
+  }
+  
+  .address button:focus + ul {
+    opacity: 1;
+    pointer-events: all;
+    transform: translateY(0px);
+  }
+
+  .address button:active {
+    border: none;
+  }
+  
+  .address ul {
+    position: absolute;
+    background: rgb(240, 240, 240);
+    box-shadow: 0.1em 0.1em 1.25em rgba(0, 0, 0, 0.3);
+    margin-top: 10px;
+    width: 214px;
+    height: 225px;
+    font-size: 2rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    list-style: none;
+    border-radius: 10px;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-10px);
+    transition: all 0.4s ease;
+  }
+  
+  .address li {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .address li:hover {
+    background-color: rgba(0, 0, 0, 0.356);
+  }
+  
+  .address a {
+    color: black;
+    text-decoration: none;
+  }
+}
